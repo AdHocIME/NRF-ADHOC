@@ -34,8 +34,6 @@
 #endif
 
 /* Includes ------------------------------------------------------------------*/
-#include  "usbd_ioreq.h"
-
 /** @addtogroup STM32_USB_DEVICE_LIBRARY
   * @{
   */
@@ -45,6 +43,28 @@
   * @{
   */ 
 
+
+#include <stdint.h>
+#include <stdbool.h>
+#include <string.h>
+#include <stddef.h>
+#include "usbd_ioreq.h"
+#include "rndis_protocol.h"
+
+#define RNDIS_MTU        1500                           /* MTU value */
+#define RNDIS_LINK_SPEED 12000000                       /* Link baudrate (12Mbit/s for USB-FS) */
+#define RNDIS_VENDOR     "fetisov"                      /* NIC vendor name */
+#define RNDIS_HWADDR     0x20,0x89,0x84,0x6A,0x96,0xAB  /* MAC-address to set to host interface */
+
+typedef void (*rndis_rxproc_t)(const char *data, int size);
+
+extern usb_eth_stat_t usb_eth_stat;
+extern rndis_state_t rndis_state;
+
+extern rndis_rxproc_t rndis_rxproc;
+
+bool   rndis_can_send(void);
+bool   rndis_send(const void *data, int size);
 
 /** @defgroup usbd_cdc_Exported_Defines
   * @{
@@ -58,12 +78,19 @@
 #define CDC_DATA_FS_MAX_PACKET_SIZE                 64  /* Endpoint IN & OUT Packet size */
 #define CDC_CMD_PACKET_SIZE                         8  /* Control Endpoint Packet size */ 
 
-#define USB_CDC_CONFIG_DESC_SIZ                     67
 #define CDC_DATA_HS_IN_PACKET_SIZE                  CDC_DATA_HS_MAX_PACKET_SIZE
 #define CDC_DATA_HS_OUT_PACKET_SIZE                 CDC_DATA_HS_MAX_PACKET_SIZE
 
 #define CDC_DATA_FS_IN_PACKET_SIZE                  CDC_DATA_FS_MAX_PACKET_SIZE
 #define CDC_DATA_FS_OUT_PACKET_SIZE                 CDC_DATA_FS_MAX_PACKET_SIZE
+
+#define RNDIS_NOTIFICATION_IN_SZ 0x08
+#define RNDIS_DATA_IN_SZ         0x40
+#define RNDIS_DATA_OUT_SZ        0x40
+
+#define RNDIS_NOTIFICATION_IN_EP 0x81
+#define RNDIS_DATA_IN_EP         0x82
+#define RNDIS_DATA_OUT_EP        0x03
 
 /*---------------------------------------------------------------------*/
 /*  CDC definitions                                                    */

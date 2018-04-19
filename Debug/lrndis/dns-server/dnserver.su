@@ -1,0 +1,3 @@
+dnserver.c:126:13:udp_recv_proc	56	static
+dnserver.c:186:6:dnserv_free	8	static
+dnserver.c:167:7:dnserv_init	24	static

@@ -1,0 +1,2 @@
+netbios.c:260:1:netbios_recv	72	static
+netbios.c:323:6:netbios_init	8	static

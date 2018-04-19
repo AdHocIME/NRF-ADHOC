@@ -1,0 +1,14 @@
+httpd.c:607:1:http_write	24	static
+httpd.c:539:1:http_state_eof	8	static
+httpd.c:421:1:strnstr	24	static
+httpd.c:1619:1:http_get_404_file	16	static
+httpd.c:2392:1:http_accept	16	static
+httpd.c:700:1:http_close_conn	16	static
+httpd.c:1505:1:http_send	64	static
+httpd.c:2229:1:http_sent	8	static
+httpd.c:2256:1:http_poll	8	static
+httpd.c:2304:1:http_recv	72	static
+httpd.c:2212:1:http_err	8	static
+httpd.c:2452:1:httpd_init	8	static
+httpd.c:2474:1:http_set_ssi_handler	0	static
+httpd.c:2496:1:http_set_cgi_handlers	0	static
