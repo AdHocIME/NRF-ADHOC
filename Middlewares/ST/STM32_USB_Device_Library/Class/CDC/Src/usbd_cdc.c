@@ -175,7 +175,7 @@ USBD_ClassTypeDef  USBD_CDC =
   rndis_iso_in_incomplete,
   rndis_iso_out_incomplete,
   NULL,
-  USBD_CDC_GetFSCfgDesc,    
+  USBD_CDC_GetFSCfgDesc,
   NULL,
   NULL,
 };
@@ -532,7 +532,6 @@ void rndis_handle_set_msg(void  *pdev)
 	/* Never have longer parameter names than PARM_NAME_LENGTH */
 	/*
 	char parmname[PARM_NAME_LENGTH+1];
-
 	uint8_t i;
 	int8_t parmlength;
 	*/
@@ -549,7 +548,6 @@ void rndis_handle_set_msg(void  *pdev)
 	{
 		parmlength = CFGBUF->ParameterNameLength;
 	}
-
 	i = 0;
 	while (parmlength > 0)
 	{
