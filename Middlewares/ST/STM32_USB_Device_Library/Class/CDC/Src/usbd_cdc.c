@@ -321,6 +321,12 @@ static uint8_t  USBD_CDC_Init (USBD_HandleTypeDef *pdev,
                    USBD_EP_TYPE_BULK,
 				   RNDIS_DATA_IN_SZ);
 
+    USBD_LL_OpenEP(pdev,
+    			   RNDIS_DATA_OUT_EP,
+				   USBD_EP_TYPE_BULK,
+				   RNDIS_DATA_OUT_SZ);
+
+
     USBD_LL_PrepareReceive(pdev,
     					   RNDIS_DATA_OUT_EP,
 						   (uint8_t*)usb_rx_buffer,

@@ -34,6 +34,7 @@
 #include "stm32f4xx_hal.h"
 #include "stm32f4xx.h"
 #include "stm32f4xx_it.h"
+#include "main.h"
 
 /* USER CODE BEGIN 0 */
 
@@ -173,17 +174,17 @@ void PendSV_Handler(void)
 /**
 * @brief This function handles System tick timer.
 */
-void SysTick_Handler(void)
-{
+//void SysTick_Handler(void)
+//{
   /* USER CODE BEGIN SysTick_IRQn 0 */
 
   /* USER CODE END SysTick_IRQn 0 */
-  HAL_IncTick();
-  HAL_SYSTICK_IRQHandler();
+//  HAL_IncTick();
+//  HAL_SYSTICK_IRQHandler();
   /* USER CODE BEGIN SysTick_IRQn 1 */
-
+//  usAddition += 1000;
   /* USER CODE END SysTick_IRQn 1 */
-}
+//}
 
 /******************************************************************************/
 /* STM32F4xx Peripheral Interrupt Handlers                                    */

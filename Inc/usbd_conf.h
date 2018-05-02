@@ -162,6 +162,20 @@
 #define USBD_DbgLog(...)
 #endif
 
+
+#define RNDIS_NOTIFICATION_IN_EP 0x81
+#define RNDIS_DATA_IN_EP         0x82
+#define RNDIS_DATA_OUT_EP        0x03
+
+#define RNDIS_NOTIFICATION_IN_SZ 0x08
+#define RNDIS_DATA_IN_SZ         0x40
+#define RNDIS_DATA_OUT_SZ        0x40
+
+#define USBD_CFG_MAX_NUM         1
+#define USBD_ITF_MAX_NUM         1
+#define USB_MAX_STR_DESC_SIZ     64
+
+#define USBD_SELF_POWERED 1
 /**
   * @}
   */

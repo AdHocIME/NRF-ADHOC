@@ -54,7 +54,7 @@
 /* Includes ------------------------------------------------------------------*/
 
 /* USER CODE BEGIN Includes */
-
+//extern int64_t usAddition;
 /* USER CODE END Includes */
 
 /* Private define ------------------------------------------------------------*/

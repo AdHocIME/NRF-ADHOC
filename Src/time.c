@@ -33,35 +33,36 @@ volatile uint32_t sysTimeDelayCounter;
 
 void RTC_Config(void)
 {
-    RTC_TimeTypeDef time;
+    //RTC_TimeTypeDef time;
     /* Enable the PWR clock */
-    RCC_APB1PeriphClockCmd(RCC_APB1Periph_PWR, ENABLE);
+    //RCC_APB1PeriphClockCmd(RCC_APB1Periph_PWR, ENABLE);
     /* Allow access to RTC */
-    PWR_BackupAccessCmd(ENABLE);
-    RCC_LSEConfig(RCC_LSE_ON);
+    //PWR_BackupAccessCmd(ENABLE);
+    //RCC_LSEConfig(RCC_LSE_ON);
     /* Wait till LSE is ready */  
-    while(RCC_GetFlagStatus(RCC_FLAG_LSERDY) == RESET) {}
+    //while(RCC_GetFlagStatus(RCC_FLAG_LSERDY) == RESET) {}
     /* Select the RTC Clock Source */
-    RCC_RTCCLKConfig(RCC_RTCCLKSource_LSE);
+    //RCC_RTCCLKConfig(RCC_RTCCLKSource_LSE);
     /* Enable the RTC Clock */
-    RCC_RTCCLKCmd(ENABLE);
+    //RCC_RTCCLKCmd(ENABLE);
     /* Wait for RTC APB registers synchronisation */
-    RTC_WaitForSynchro();
-    RTC_TimeStructInit(&time);
-    RTC_SetTime(RTC_Format_BCD, &time);
+    //RTC_WaitForSynchro();
+    //RTC_TimeStructInit(&time);
+    //RTC_SetTime(RTC_Format_BCD, &time);
 }
 
 void time_init(void)
 {
     /* RTC_Config(); */
-    if (SysTick_Config(SystemCoreClock / 1000))
-        while (1) {} /* Capture error */
+//    if (SysTick_Config(SystemCoreClock / 1000))
+//        while (1) {} /* Capture error */
 }
 
 void rtctime(int *h, int *m, int *s)
 {
     RTC_TimeTypeDef time;
-    RTC_GetTime(RTC_Format_BIN, &time);
+    //RTC_GetTime(RTC_Format_BIN, &time);
+    HAL_RTC_GetTime(&time, RTC_FORMAT_BIN)
     if (h != NULL) *h = time.RTC_Hours;
     if (m != NULL) *m = time.RTC_Minutes;
     if (s != NULL) *s = time.RTC_Seconds;
