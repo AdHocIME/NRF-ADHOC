@@ -1,5 +1,5 @@
-dhserver.c:108:22:entry_by_mac.constprop	32	static
-dhserver.c:136:10:find_dhcp_option	12	static
+dhserver.c:108:22:entry_by_mac	32	static
+dhserver.c:136:10:find_dhcp_option	8	static
 dhserver.c:150:5:fill_options	32	static
 dhserver.c:218:13:udp_recv_proc	64	static
 dhserver.c:327:6:dhserv_free	8	static

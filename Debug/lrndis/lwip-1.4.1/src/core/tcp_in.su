@@ -1,4 +1,4 @@
-tcp_in.c:800:1:tcp_oos_insert_segment	24	static
+tcp_in.c:1542:1:tcp_parseopt	24	static
+tcp_in.c:800:1:tcp_oos_insert_segment	32	static
 tcp_in.c:847:1:tcp_receive	32	static
-tcp_in.c:1542:1:tcp_parseopt.isra.0	24	static
-tcp_in.c:92:1:tcp_input	72	static
+tcp_in.c:92:1:tcp_input	40	static

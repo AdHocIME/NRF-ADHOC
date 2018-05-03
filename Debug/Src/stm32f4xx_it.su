@@ -6,4 +6,4 @@ stm32f4xx_it.c:120:6:UsageFault_Handler	0	static
 stm32f4xx_it.c:138:6:SVC_Handler	0	static
 stm32f4xx_it.c:151:6:DebugMon_Handler	0	static
 stm32f4xx_it.c:164:6:PendSV_Handler	0	static
-stm32f4xx_it.c:199:6:OTG_FS_IRQHandler	0	static
+stm32f4xx_it.c:199:6:OTG_FS_IRQHandler	8	static

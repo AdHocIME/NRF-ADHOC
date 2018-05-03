@@ -720,7 +720,7 @@ static __inline uint8_t usbd_cdc_transfer(void *pdev)
 		if (sended > rndis_tx_size) sended = rndis_tx_size;
 		memcpy(first + sizeof(rndis_data_packet_t), rndis_tx_ptr, sended);
 		USBD_LL_Transmit(pdev,
-					 RNDIS_NOTIFICATION_IN_EP,
+					 RNDIS_DATA_IN_EP,
 					 (uint8_t *)&first,
 					 sizeof(rndis_data_packet_t) + sended);
 	}

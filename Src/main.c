@@ -81,6 +81,8 @@ static uint8_t ipaddr[4]  = {192, 168, 7, 1};
 static uint8_t netmask[4] = {255, 255, 255, 0};
 static uint8_t gateway[4] = {0, 0, 0, 0};
 
+bool buffStatus;
+
 
 #define NUM_DHCP_ENTRY 3
 
@@ -215,7 +217,8 @@ err_t linkoutput_fn(struct netif *netif, struct pbuf *p)
         memcpy(data + size, (char *)q->payload, q->len);
         size += q->len;
     }
-    if (!rndis_can_send())
+    buffStatus = rndis_can_send();
+    if (!buffStatus)
         return ERR_USE;
     rndis_send(data, size);
     outputs++;
