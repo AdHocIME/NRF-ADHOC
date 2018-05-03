@@ -300,7 +300,7 @@ int main(void)
 
 	while (dhserv_init(&dhcp_config) != ERR_OK) ;
 
-	while (dnserv_init(PADDR(ipaddr), 53, dns_query_proc) != ERR_OK) ;
+	//while (dnserv_init(PADDR(ipaddr), 53, dns_query_proc) != ERR_OK) ;
 
     //httpd_init();
 

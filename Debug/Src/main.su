@@ -2,9 +2,9 @@ main.c:229:7:netif_init_cb	0	static
 main.c:158:1:tcp_timer_proc	8	static
 main.c:166:6:on_packet	8	static
 main.c:197:7:output_fn	8	static
-main.c:259:6:dns_query_proc	16	static
 main.c:153:1:link_led_off_proc	0	static
 main.c:172:6:usb_polling	16	static
+main.c:259:6:dns_query_proc	16	static
 main.c:317:6:SysTick_Handler	8	static
 main.c:329:9:utime	16	static
 main.c:351:6:rtctime	40	static
