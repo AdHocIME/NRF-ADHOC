@@ -11,7 +11,7 @@ usbd_conf.c:273:6:HAL_PCD_ISOOUTIncompleteCallback	8	static
 usbd_conf.c:284:6:HAL_PCD_ISOINIncompleteCallback	8	static
 usbd_conf.c:294:6:HAL_PCD_ConnectCallback	8	static
 usbd_conf.c:304:6:HAL_PCD_DisconnectCallback	8	static
-usbd_conf.c:318:20:USBD_LL_Init	8	static
+usbd_conf.c:318:20:USBD_LL_Init	16	static
 usbd_conf.c:354:20:USBD_LL_DeInit	8	static
 usbd_conf.c:386:20:USBD_LL_Start	8	static
 usbd_conf.c:418:20:USBD_LL_Stop	8	static

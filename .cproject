@@ -121,7 +121,7 @@
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Inc"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
-						<entry excluding="fsdata.c|time.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Src"/>
+						<entry excluding="usbd_cdc_if.c|fsdata.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Src"/>
 						<entry excluding="lwip-1.4.1/apps/httpserver_raw|lwip-1.4.1/src/core/ipv6|lwip-1.4.1/apps/udpecho|lwip-1.4.1/apps/tcpecho_raw|lwip-1.4.1/apps/tcpecho|lwip-1.4.1/apps/socket_examples|lwip-1.4.1/apps/sntp|lwip-1.4.1/apps/snmp_private_mib|lwip-1.4.1/apps/smtp|lwip-1.4.1/apps/shell|lwip-1.4.1/apps/rtp|lwip-1.4.1/apps/ping|lwip-1.4.1/apps/netio|lwip-1.4.1/apps/netbios|lwip-1.4.1/apps/httpserver|lwip-1.4.1/apps/chargen|lwip-1.4.1/apps/httpserver_raw/makefsdata|lwip-1.4.1/test" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="lrndis"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="startup"/>
 					</sourceEntries>
@@ -246,7 +246,7 @@
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Inc"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
-						<entry excluding="fsdata.c|time.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Src"/>
+						<entry excluding="usbd_cdc_if.c|fsdata.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Src"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="startup"/>
 					</sourceEntries>
 				</configuration>

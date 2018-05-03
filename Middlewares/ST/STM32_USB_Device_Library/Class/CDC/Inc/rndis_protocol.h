@@ -9,8 +9,10 @@
  */
 
 /* Copyright (c) 2008  Colin O'Flynn
+
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are met:
+
    * Redistributions of source code must retain the above copyright
      notice, this list of conditions and the following disclaimer.
    * Redistributions in binary form must reproduce the above copyright
@@ -20,6 +22,7 @@
    * Neither the name of the copyright holders nor the names of
      contributors may be used to endorse or promote products derived
      from this software without specific prior written permission.
+
   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
@@ -36,7 +39,7 @@
 #ifndef _RNDIS_H
 #define _RNDIS_H
 
-/**
+/** 
   \addtogroup RNDIS
   @{
   */
@@ -109,23 +112,23 @@ typedef struct{
 	rndis_MinorVersion_t	MinorVersion;
 	rndis_MaxTransferSize_t	MaxTransferSize;
 	} rndis_initialize_msg_t;
-
+	
 /* Response: */
 typedef struct{
-	rndis_MessageType_t		MessageType;
-	rndis_MessageLength_t	MessageLength;
-	rndis_RequestId_t		RequestId;
-	rndis_Status_t			Status;
-	rndis_MajorVersion_t	MajorVersion;
-	rndis_MinorVersion_t	MinorVersion;
-	rndis_DeviceFlags_t		DeviceFlags;
-	rndis_Medium_t			Medium;
-	rndis_MaxPacketsPerTransfer_t 	MaxPacketsPerTransfer;
-	rndis_MaxTransferSize_t			MaxTransferSize;
-	rndis_PacketAlignmentFactor_t 	PacketAlignmentFactor;
-	rndis_AfListOffset_t	AfListOffset;
-	rndis_AfListSize_t		AfListSize;
-	} rndis_initialize_cmplt_t;
+  rndis_MessageType_t		MessageType;
+  rndis_MessageLength_t	        MessageLength;
+  rndis_RequestId_t		RequestId;
+  rndis_Status_t		Status;
+  rndis_MajorVersion_t	        MajorVersion;
+  rndis_MinorVersion_t	        MinorVersion;
+  rndis_DeviceFlags_t		DeviceFlags;
+  rndis_Medium_t		Medium;
+  rndis_MaxPacketsPerTransfer_t MaxPacketsPerTransfer;
+  rndis_MaxTransferSize_t	MaxTransferSize;
+  rndis_PacketAlignmentFactor_t PacketAlignmentFactor;
+  rndis_AfListOffset_t	        AfListOffset;
+  rndis_AfListSize_t		AfListSize;
+} rndis_initialize_cmplt_t;
 
 
 /*** Remote NDIS Halt Message ***/
@@ -134,7 +137,7 @@ typedef struct{
 	rndis_MessageLength_t	MessageLength;
 	rndis_RequestId_t		RequestId;
 	} rndis_halt_msg_t;
-
+	
 typedef uint32_t rndis_Oid_t;
 typedef uint32_t rndis_InformationBufferLength_t;
 typedef uint32_t rndis_InformationBufferOffset_t;
@@ -150,7 +153,7 @@ typedef struct{
 	rndis_InformationBufferOffset_t	InformationBufferOffset;
 	rndis_DeviceVcHandle_t			DeviceVcHandle;
 	}  rndis_query_msg_t;
-
+	
 /* Response: */
 
 typedef struct{
@@ -161,7 +164,7 @@ typedef struct{
 	rndis_InformationBufferLength_t	InformationBufferLength;
 	rndis_InformationBufferOffset_t	InformationBufferOffset;
 	} rndis_query_cmplt_t;
-
+	
 /*** Remote NDIS Set Message ***/
 typedef struct{
 	rndis_MessageType_t		MessageType;
@@ -172,7 +175,7 @@ typedef struct{
 	rndis_InformationBufferOffset_t	InformationBufferOffset;
 	rndis_DeviceVcHandle_t			DeviceVcHandle;
 	} rndis_set_msg_t;
-
+	
 /* Response */
 typedef struct{
 	rndis_MessageType_t		MessageType;
@@ -196,9 +199,9 @@ typedef struct{
 	rndis_ParameterNameLength_t		ParameterNameLength;
 	rndis_ParameterType_t			ParameterType;
 	rndis_ParameterValueOffset_t	ParameterValueOffset;
-	rndis_ParameterValueLength_t	ParameterValueLength;
+	rndis_ParameterValueLength_t	ParameterValueLength;	
 	}rndis_config_parameter_t;
-
+	
 typedef uint32_t rndis_Reserved_t;
 
 /*** Remote NDIS Soft Reset Message ***/
@@ -207,7 +210,7 @@ typedef struct{
 	rndis_MessageLength_t	MessageLength;
 	rndis_Reserved_t		Reserved;
 	} rndis_reset_msg_t;
-
+	
 typedef uint32_t rndis_AddressingReset_t;
 
 /* Response: */
@@ -217,7 +220,7 @@ typedef struct{
 	rndis_Status_t			Status;
 	rndis_AddressingReset_t	AddressingReset;
 	}  rndis_reset_cmplt_t;
-
+	
 /*** Remote NDIS Indicate Status Message ***/
 typedef struct{
 	rndis_MessageType_t		MessageType;
@@ -226,7 +229,7 @@ typedef struct{
 	rndis_Status_t			StatusBufferLength;
 	rndis_Status_t			StatusBufferOffset;
 	}  rndis_indicate_status_t;
-
+	
 typedef uint32_t rndis_DiagStatus_t;
 typedef uint32_t rndis_ErrorOffset_t;
 
@@ -234,14 +237,14 @@ typedef struct {
 	rndis_DiagStatus_t		DiagStatus;
 	rndis_ErrorOffset_t		ErrorOffset;
 	}rndis_diagnostic_info_t;
-
+	
 /*** Remote NDIS Keepalive Message */
 typedef struct{
 	rndis_MessageType_t		MessageType;
 	rndis_MessageLength_t	MessageLength;
 	rndis_RequestId_t		RequestId;
 	}rndis_keepalive_msg_t;
-
+	
 /* Response: */
 typedef struct{
 	rndis_MessageType_t		MessageType;
@@ -260,19 +263,20 @@ typedef uint32_t rndis_NumOOBDataElements_t;
 typedef uint32_t rndis_PerPacketInfoOffset_t;
 typedef uint32_t rndis_PerPacketInfoLength_t;
 
-typedef struct{
-	rndis_MessageType_t			MessageType;
-	rndis_MessageLength_t		MessageLength;
-	rndis_DataOffset_t			DataOffset;
-	rndis_DataLength_t			DataLength;
-	rndis_OOBDataOffset_t		OOBDataOffset;
-	rndis_OOBDataLength_t		OOBDataLength;
-	rndis_NumOOBDataElements_t	NumOOBDataElements;
-	rndis_PerPacketInfoOffset_t	PerPacketInfoOffset;
-	rndis_PerPacketInfoLength_t PerPacketInfoLength;
-	rndis_DeviceVcHandle_t		DeviceVcHandle;
-	rndis_Reserved_t			Reserved;
-	}rndis_data_packet_t;
+typedef struct
+{
+  rndis_MessageType_t	        MessageType;
+  rndis_MessageLength_t		MessageLength;
+  rndis_DataOffset_t	        DataOffset;
+  rndis_DataLength_t	        DataLength;
+  rndis_OOBDataOffset_t		OOBDataOffset;
+  rndis_OOBDataLength_t		OOBDataLength;
+  rndis_NumOOBDataElements_t	NumOOBDataElements;
+  rndis_PerPacketInfoOffset_t	PerPacketInfoOffset;
+  rndis_PerPacketInfoLength_t     PerPacketInfoLength;
+  rndis_DeviceVcHandle_t		DeviceVcHandle;
+  rndis_Reserved_t	        Reserved;
+}rndis_data_packet_t;
 
 typedef uint32_t rndis_ClassInformationOffset_t;
 typedef uint32_t rndis_Size_t;
@@ -299,6 +303,6 @@ typedef struct {
 	uint32_t		rxbad;
 } usb_eth_stat_t;
 
-#endif /* _RNDIS_H */
+#endif //_RNDIS_H
 
 /** @} */

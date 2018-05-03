@@ -1,0 +1,14 @@
+communication.c:91:7:netif_init_cb	0	static
+communication.c:162:13:state_cgi_handler	0	static
+communication.c:38:7:linkoutput_fn	16	static
+communication.c:86:7:output_fn	8	static
+communication.c:104:1:tcp_timer_proc	8	static
+communication.c:109:6:dns_query_proc	16	static
+communication.c:256:17:ssi_handler	56	static
+communication.c:167:13:ctl_cgi_handler	40	static
+communication.c:70:6:usb_polling	16	static
+communication.c:119:6:init_lwip	40	static
+communication.c:137:6:init_netif	0	static
+communication.c:142:6:init_dnserv	24	static
+communication.c:148:6:init_dhserv	8	static
+communication.c:153:6:init_htserv	8	static

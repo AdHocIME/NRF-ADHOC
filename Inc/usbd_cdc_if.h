@@ -56,7 +56,7 @@
 #endif
 
 /* Includes ------------------------------------------------------------------*/
-#include "usbd_cdc.h"
+#include <usbd_rndis.h>
 
 /* USER CODE BEGIN INCLUDE */
 

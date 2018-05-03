@@ -16,14 +16,14 @@
  */
 
 /*
- * ndis.h
- *
+ * ndis.h 
+ * 
  * Modified by Colin O'Flynn <coflynn@newae.com>
  * ntddndis.h modified by Benedikt Spranger <b.spranger@pengutronix.de>
- *
- * Thanks to the cygwin development team,
+ * 
+ * Thanks to the cygwin development team, 
  * espacially to Casper S. Hornstrup <chorns@users.sourceforge.net>
- *
+ * 
  * THIS SOFTWARE IS NOT COPYRIGHTED
  *
  * This source code is offered for use in the public domain. You may
@@ -77,6 +77,7 @@ struct NDIS_PNP_CAPABILITIES {
 	__le32					Flags;
 	struct NDIS_PM_WAKE_UP_CAPABILITIES	WakeUpCapabilities;
 };
+
 struct NDIS_PM_PACKET_PATTERN {
 	__le32	Priority;
 	__le32	Reserved;
@@ -174,7 +175,7 @@ struct NDIS_PM_PACKET_PATTERN {
 #define OID_802_3_XMIT_LATE_COLLISIONS    0x01020207
 
 /* Wireless LAN OIDs */
-/* Mandatory */
+//Mandatory
 #define OID_802_11_BSSID                  0x0D010101 /* Q  S     */
 #define OID_802_11_SSID                   0x0D010102 /* Q  S     */
 #define OID_802_11_NETWORK_TYPE_IN_USE    0x0D010204 /* Q  S     */

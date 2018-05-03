@@ -1,0 +1,4 @@
+hw_config.c:52:6:MX_GPIO_Init	8	static
+hw_config.c:28:6:init_periph	8	static
+hw_config.c:95:6:SysTick_Init	0	static
+hw_config.c:129:10:sys_now	8	static
